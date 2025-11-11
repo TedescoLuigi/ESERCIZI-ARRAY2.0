@@ -1,4 +1,5 @@
 ﻿
+using System.ComponentModel;
 using System.Numerics;
 
 namespace Esercizi_array
@@ -139,7 +140,7 @@ namespace Esercizi_array
             Console.WriteLine();
 
 
-            Console.Write("---------------------esercizio inClasse 2-----------------------");
+            Console.WriteLine("---------------------esercizio inClasse 2-----------------------");
 
             //esercizio inClasse 2
             //dati V1 e V2 creare V3 che sia la concatenazione di V1 e V2
@@ -161,12 +162,36 @@ namespace Esercizi_array
                 Console.Write($"[{V3[i]}]");
            }
 
-                Console.WriteLine();
-                Console.Write("-------------------------------------------------------------");
+           Console.WriteLine();
+            Console.WriteLine();
+
+            Console.WriteLine("------------------------esercizio mehdi -----------------------");
+
+            int[] Ve1 = { 2, 3, 5, -8, 79, 108 };
+            int[] Ve2 = { 20, 4, 7, 212, 18, 19 };
+            int[] Ve3 = new int[Ve1.Length + Ve2.Length];
+
+            for(int i=0;i<Ve1.Length; i++)
+            {
+                
+                Ve3[i] = Ve1[i];
+
+            }
+            for (int i=Ve1.Length;i<Ve3.Length; i++)
+            {
+                Ve3[i] = Ve2[i-Ve1.Length];
+
+            }
+            for (int i = 0; i < Ve3.Length; i++)
+            {
+                Console.Write($"[{Ve3[i]}]");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
 
 
 
-            
 
         }
 
